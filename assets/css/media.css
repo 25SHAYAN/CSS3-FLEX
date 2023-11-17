@@ -1,0 +1,17 @@
+/*MOBILE VERSION*/
+
+/*p2.html */
+@media(max-width:768px){
+    .conatiner{
+        flex-flow: column;/*for direction */
+    }
+     .container>.item{
+        width: 100%;
+     }
+}
+/*table version*/
+@media(min-width:798px) and (max-width:1200px){
+    .container>.item{
+        width: 44%;/*for 2 cols in tab version */
+    }
+}

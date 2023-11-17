@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*p2.html */
+.container{
+   background-color: blue;
+   padding:20px;
+   display: flex;/*by defalult flex direction is row */
+   /*flex-wrap: nowrap;for single line */
+   /*flex-wrap: wrap;for multiple liens colwidth is 100% */
+
+ /* flex-direction: row;           same as defalt 
+   flex-direction: row-reverse;    to revrse the row content 
+   flex-direction: column;        column direction 
+    flex-direction: column-reverse;    reverse column format */ 
+ 
+
+    flex-flow: row wrap;/**instead of flex-direction and wrap we can use single this which includes both wrap and dir */
+
+    /*column-gap:20px ;initially we will not get exact colms due to width value reduce width value from 33.33 to 31 
+    row-gap: 20px;*/
+
+    /*instead of row and col gap we can use gap property */
+
+    gap: 20px;/*for both row and col */
+}
+.container>.item{
+    background-color: aquamarine;
+   /* padding: 20px;
+    margin: 20px;we are commenting this because width we gae 33.33% so 3 colms must be there since margin padding takes 20% its not possible to make 3 cols so we coomented*/
+
+   /* width: 33.33%;for getting 3 columns */
+
+   width: 28%;/*later reduced from 31 to 28 for padding purpose below padding */
+   padding: 20px;
+}
+
+
+/*p3.html */
+.container1{
+    justify-content:flex-start ;/*from left */
+    justify-content: flex-end;/*from right */
+    justify-content: start;/*same as flex start */
+    justify-content: end;/*same as flex end */
+    justify-content: center;/*fixes at center */
+    justify-content: space-around;/*around each elemnt has space */
+    justify-content: space-between;/*gap b/w two items */
+    justify-content:space-evenly ;/*equall space */
+}
+
+/*p4.html */
+.container2{
+    height: 400px;
+    align-items: flex-start;/* starts from top  */
+    align-items: flex-end;/*starts fro down or end */
+    align-items: start;/*same as flex-start */
+    align-items: end;/*same as flex end */
+    align-items: center;/*aligns center */
+
+    align-content: flex-start;/*to remove space created in heightextra space gap */
+    align-content: flex-end;/*move blocks from top to bottom */
+    align-content: start;/*same as flex-start,end */
+    align-content: end;
+    align-content: center;/*aligns center */
+    align-content: space-between;/**
+    large gap b/w elemts */
+    align-content:space-around ;
+    align-content: space-evenly;/*equall space */
+}
+.container2>.item{
+    height: 50px;
+}
+
+/*P5.HTML */
+
+.container3>.item{
+    width: 200px;
+    height: 100px;
+    flex-grow: 1;/*equall space for all the items */
+    flex:1 ;/*same as flex-grow */
+}
+.container3>.item:first-child{
+    flex: 2;
+}
+.container3>.item:last-child{
+    flex: 3;
+}
+
+/*p6.html */
+.container4{
+    flex-wrap: nowrap;
+}
+.container4>.item{
+    flex-shrink: 1;/*maintains same space for each block ina single line */
+}
+.container4>.item:first-child{
+    flex-shrink: 5;/**
+    since the priority is more it gives concentration to item1 makes width lesser as we decrease responsive size */
+}
+.container4>.item:last-child{
+    flex-shrink: 9;
+}
+
+/*P7.HTML */
+
+.container5>.item:first-child{
+  order: 2;
+}
+.container5>.item:nth-child(2){
+    order: 3;
+  }
+  .container5>.item:last-child{
+    order: 1;
+  }
+
+  
+/*P8.HTML */
+
+.container6{
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+   /* align-items: baseline;(123 )all will come in same line */
+
+}
+.container6>.item:first-child{
+    font-size: 20px;
+    align-self: flex-start;
+  }
+  .container6>.item:nth-child(2){
+    font-size: 30px;
+  }
+
+  .container6>.item:last-child{
+    font-size: 40px;
+    align-self: flex-end;
+  }
